@@ -1,0 +1,112 @@
+<html> 
+    <!--notas importantes!!!-->
+    <head>
+        <title>Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--espaço pra imagem do site-->    
+    </head>
+    <body class="movbacat">
+        
+        <div style="width: 100%; height: 2.5px; background-color: #0b290e7b;"></div>
+        <iframe name="hiddenFrame" style="position: absolute; width:0; height:0; border:0;"></iframe>
+            
+        <form method="post" action="UsuarioInclusaoController.php" target="hiddenFrame">
+            <div class="login" style="float: left;">
+                <br>
+                <img src="img/cliente.png" style="height:18%; margin-bottom: 2%;">
+               
+                <div>    
+                    <input type="text" class="textos" id="cpf" name="cpf" placeholder="CPF" style="width: 240px;" maxlength="14" size="40" onkeypress="formatar_mascara(this,'###.###.###-##')" onblur='emptyField("cpf")'/>
+                    <input type="date" class="textos" id="nasc" name="nasc" placeholder="Nascimento" style="width: 150px;" onblur='emptyField("nasc")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="text" class="textos" id="nome" name="nome" placeholder="Nome" style="width: 150px;" onblur='emptyField("nome")'/>
+                    <input type="text" class="textos" id="snome" name="snome" placeholder="Sobrenome" style="width: 240px;" onblur='emptyField("snome")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="email" class="textos" id="email" name="email" placeholder="Email" style="width: 390px;" onblur='emptyField("email")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="password" class="textos" id="senha" name="senha" placeholder="Senha" style="width: 390px;" onblur='emptyField("senha")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="password" class="textos" id="csenha" name="csenha" placeholder="Confirmar Senha" style="width: 390px;" onblur='emptyField("csenha")'/>
+                </div>   
+                <div>
+                    <p> <input type="checkbox" id="lieaceito" name="lieaceito" value="x"> Eu li e aceito os <a href="x.html"> Termos de Uso</a> </p>
+                </div>
+            </div>
+            
+            <div>
+                <button type="submit" style="float: right; border: none; background-color: rgba(0, 0, 0, 0); margin-top: 38%;" id="btn_endereco"><img src="img/avançar.png" width="75px"></button>
+            </div>
+        </form>
+
+        <div>
+            <img src="img/ana_kelvin.png" width="500px" style="float: right; margin-right: 5%; margin-top: 2%;">
+        </div>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2 style="padding-top: 40px; padding-bottom: 40px;">Gostaria de cadastrar seu endereço agora?</h2>
+                    <div class="topnav" style="border-bottom-left-radius: 40px; border-bottom-right-radius: 40px;">
+                        <a href="cadendereco.html" style="float: left; width: 50%; padding: 0px; padding-top: 18px; padding-bottom: 18px;"> Sim </a>
+                        <a href="home.html" style="float: right; width: 50%; padding: 0px; padding-top: 18px; padding-bottom: 18px;"> Cadastrar depois </a>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        </div>  
+    </body>
+    <!--precisei usar um pedacinho de java pro pop-up aparecer-->
+    <script> 
+        var popup = document.getElementById("popup");
+        
+        var btn = document.getElementById("btn_endereco");
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+          popup.style.display = "block";
+        }
+        
+        span.onclick = function() {
+          popup.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+          if (event.target == popup) {
+            popup.style.display = "none";
+          }
+        }
+    </script>
+    <!--aqui é pra ter máscara nos texto-->
+    <script type="text/javascript"> 
+        function formatar_mascara(src, mascara) {
+        var campo = src.value.length;
+        var saida = mascara.substring(0,1);
+        var texto = mascara.substring(campo);
+        if(texto.substring(0,1) != saida) {
+            src.value += texto.substring(0,1);
+            }
+        }
+    </script>
+    <!--esse último querido é pra mudar de cor quando estiver vazio-->
+    <script>
+        function emptyField(x) {
+        var field = document.getElementById(x);
+
+        if(field.value !== ""){
+            field.style.backgroundColor = "#fffae8";
+        } else {
+            field.style.backgroundColor = "#fababa";
+        }}
+
+    </script>
+</html>

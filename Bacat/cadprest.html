@@ -1,0 +1,77 @@
+<html> 
+    <!--notas importantes!!!-->
+    <head>
+        <title>Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--espaço pra imagem do site-->    
+    </head>
+    <body class="movbacat">
+
+        <div style="width: 100%; height: 2.5px; background-color: #0b290e7b;"></div>
+
+        <form method="post" action="UsuarioInclusaoController.php">
+            <div class="login" style="float: left;">
+                <br>
+                <img src="img/prestador.png" style="height:18%; margin-bottom: 2%;">
+               
+                <div>    
+                    <input type="text" class="textos" id="cnpj" name="cnpj" placeholder="CNPJ" style="width: 240px;" maxlength="18" size="40" onkeypress="formatar_mascara(this,'##.###.###/####-##')" onblur='emptyField("cnpj")'/>
+                    <input type="date" class="textos" id="nasc" name="nasc" placeholder="Nascimento" style="width: 150px;" onblur='emptyField("nasc")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="text" class="textos" id="nome" name="nome" placeholder="Nome" style="width: 150px;" onblur='emptyField("nome")'/>
+                    <input type="text" class="textos" id="snome" name="snome" placeholder="Sobrenome" style="width: 240px;" onblur='emptyField("snome")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="email" class="textos" id="email" name="email" placeholder="Email" style="width: 390px;" onblur='emptyField("email")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="password" class="textos" id="senha" name="senha" placeholder="Senha" style="width: 390px;" onblur='emptyField("senha")'/>
+                </div>
+                    <br>
+                <div>
+                    <input type="password" class="textos" id="csenha" name="csenha" placeholder="Confirmar Senha" style="width: 390px;" onblur='emptyField("csenha")'/>
+                </div>   
+                <div>
+                    <p> <input type="checkbox" id="lieaceito" name="lieaceito" value="x"> Eu li e aceito os <a href="x.html"> Termos de Uso</a> </p>
+                </div>
+            </div>
+
+            <div>
+                <img src="img/ash_sanches.png" width="410px" style="float: left; margin: 5%;">
+            </div>
+            
+            <div>
+                <button type="submit" style="float: right; border: none; background-color: rgba(0, 0, 0, 0); margin-top: 38%;" id="btn_endereco"><img src="img/avançar.png" width="75px"></button>
+            </div>
+        </form>
+
+        
+
+    <!--aqui é pra ter máscara nos texto-->
+    <script type="text/javascript"> 
+        function formatar_mascara(src, mascara) {
+        var campo = src.value.length;
+        var saida = mascara.substring(0,1);
+        var texto = mascara.substring(campo);
+        if(texto.substring(0,1) != saida) {
+            src.value += texto.substring(0,1);
+            }
+        }
+    </script>
+
+    <script>
+        function emptyField(x) {
+        var field = document.getElementById(x);
+    
+        if(field.value !== ""){
+            field.style.backgroundColor = "#fffae8";
+        } else {
+            field.style.backgroundColor = "#fababa";
+        }}
+    </script>
+</html>

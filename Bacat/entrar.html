@@ -1,0 +1,56 @@
+<html> 
+    <!--notas importantes!!!-->
+    <head>
+        <title>Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--espaço pra imagem do site-->    
+    </head>
+    <body class="movbacat">
+        <div>
+            <div class="topnav" style="position: relative; width: auto;">
+                <a href="bacat.html">Bacat</a>
+                <a href="bacat.html#pag4" style="float: right;">Cadastre-se</a>
+            </div>
+        </div>
+        
+        <div style="width: 100%; height: 2.5px; background-color: #0b290e7b;"></div>
+
+    <form method="post" action="UsuarioEntrar.php">
+        <div class="login" style="float: left;">
+            <br>
+            <img src="img/cliente.png" style="height:18%; margin-bottom: 2%;">
+            <div>
+                <input type="email" class="textos" id="email" name="email" placeholder="Email" style="width: 390px;" onblur='emptyField("email")'/>
+            </div>
+                <br>
+            <div>
+                <input type="password" class="textos" id="senha" name="senha" placeholder="Senha" style="width: 390px;" onblur='emptyField("senha")'/>
+                <p style="margin-top: -2.5px;"><a href="">Esqueceu sua senha?</a></p>
+            </div>
+            
+            <div>
+                <button type="submit" style="font-size: larger;">Entrar</button> <!--precisa personalizar aqui-->
+            </div>
+
+            <div>
+                <p>Não possui conta? <a href="bacat.html#pag4">cadastre-se!</a></p>
+            </div>
+            <iframe name="alerta" height="17px" width="100%" style="border: 0px;"></iframe>
+        </div>   
+    </form>
+    
+    <script>
+        function emptyField(x) {
+        var field = document.getElementById(x);
+    
+        if(field.value !== ""){
+            field.style.backgroundColor = "#fffae8";
+        } else {
+            field.style.backgroundColor = "#fababa";
+        }}
+    </script>
+
+    </body>
+
+</html>

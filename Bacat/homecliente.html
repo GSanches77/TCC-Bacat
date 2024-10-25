@@ -1,0 +1,64 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="pt">
+        <title>Home: Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <div class="sidenav" style="float: left; position: absolute; margin: 0px; padding: 0px; overflow: hidden; box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.2);">
+            <div style="height: 150px; width: 5px;">
+                <img>
+            </div>
+            <div style="display: block;">
+                <form method="post" action="AbrirPerfil.php" target="AreaConteudo" style="margin: 0px;">
+                    <button type="submit" class="cardsidenav" style="border: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>svg{fill:#f8fff7}</style>
+                            <path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div style="display: block;">
+                <form method="post" action="AbrirMensagem.php" target="AreaConteudo" style="margin: 0px;">
+                    <button type="submit" class="cardsidenav" style="border: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>svg{fill:#f8fff7}</style><path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div style="display: block;">
+                <form method="post" action="AbrirLoja.php" target="AreaConteudo" style="margin: 0px;">
+                    <button type="submit" class="cardsidenav" style="border: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40px" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>svg{fill:#f8fff7}</style>
+                            <path d="M36.8 192H603.2c20.3 0 36.8-16.5 36.8-36.8c0-7.3-2.2-14.4-6.2-20.4L558.2 21.4C549.3 8 534.4 0 518.3 0H121.7c-16 0-31 8-39.9 21.4L6.2 134.7c-4 6.1-6.2 13.2-6.2 20.4C0 175.5 16.5 192 36.8 192zM64 224V384v80c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V384 224H320V384H128V224H64zm448 0V480c0 17.7 14.3 32 32 32s32-14.3 32-32V224H512z"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div style="display: block;">
+                <form method="post" action="AbrirPerfil.php" target="AreaConteudo" style="margin: 0px;">
+                    <button type="submit" class="cardsidenav" style="border: none;">
+                    </button>
+                </form>
+            </div>
+
+            <div style="display: block; position: absolute; bottom: 0px;">
+                <a class="cardsidenav" href="bacat.html" style="padding: 5px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>svg{fill:#f8fff7}</style>
+                        <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 192 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128zM160 96c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 32C43 32 0 75 0 128L0 384c0 53 43 96 96 96l64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l64 0z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <iframe frameBorder="0" class="conteudo" id="AreaConteudo" name="AreaConteudo" style="overflow: hidden; height: 100%; width: 100%; bottom: 0;" height="100%" width="100%"></iframe>
+    </body>
+</html>

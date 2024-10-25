@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--espaço pra imagem do site-->    
+    </head>
+    <body class="movbacat">
+        
+        <div style="width: 100%; height: 2.5px; background-color: #0b290e7b;"></div>
+
+        <form method="post" action="EnderecoInclusaoController.php">
+            <div class="login" style="float: left;">
+                    <br>
+                <img src="img/endereco.png" style="height:18%; margin-bottom: 2%;"><!--precisa de imagem escrito endereço-->
+                    <br>
+                <div>       
+                    <input type="text" class="textos" id="cep" name="cep" placeholder="CEP" style="width: 240px;" maxlength="9" size="40" onkeypress="formatar_mascara(this,'#####-###')">
+                    <input type="text" class="textos" id="cidade" name="cidade" placeholder="Cidade" style="width: 150px;">
+                </div>
+                    <br>
+                <div>
+                    <select id="estado" name="estado" class="textos" placeholder="Estado">
+                        <option value="ac">AC</option>
+                        <option value="al">AL</option>
+                        <option value="ap">AP</option>
+                        <option value="am">AM</option>
+                        <option value="ba">BA</option>
+                        <option value="ce">CE</option>
+                        <option value="df">DF</option>
+                        <option value="es">ES</option>
+                        <option value="go">GO</option>
+                        <option value="ma">MA</option>
+                        <option value="mt">MT</option>
+                        <option value="ms">MS</option>
+                        <option value="mg">MG</option>
+                        <option value="pa">PA</option> 
+                        <option value="pb">PB</option>
+                        <option value="pr">PR</option>
+                        <option value="pe">PE</option>
+                        <option value="pi">PI</option>
+                        <option value="rr">RR</option>
+                        <option value="rj">RJ</option>
+                        <option value="ro">RO</option>
+                        <option value="rn">RN</option>
+                        <option value="rj">RS</option>
+                        <option value="sc">SC</option>
+                        <option value="sp">SP</option>
+                        <option value="se">SE</option>
+                        <option value="to">TO</option>
+                    </select>
+                    <input type="text" class="textos" id="rua" name="rua" placeholder="Rua" style="width: 315px;">
+                </div>
+                    <br>
+                <div>
+                    <input type="text" class="textos" id="bairro" name="bairro" placeholder="Bairro" style="width: 315px;">
+                    <input type="number" class="textos" id="num" name="num" placeholder="Num" style="width: 75px;">
+                </div>
+                    <br>
+                <div>
+                    <button type="submit" class="enviar" id="btn_cadend">enviar</button>
+                </div>
+                    <br> 
+            </div>
+        </form>
+
+    <!--aqui é pra ter máscara nos texto-->
+    <script type="text/javascript"> 
+        function formatar_mascara(src, mascara) {
+        var campo = src.value.length;
+        var saida = mascara.substring(0,1);
+        var texto = mascara.substring(campo);
+        if(texto.substring(0,1) != saida) {
+            src.value += texto.substring(0,1);
+            }
+        }
+    </script>
+</html>

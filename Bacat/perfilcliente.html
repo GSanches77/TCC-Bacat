@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--espaço pra imagem do site-->    
+    </head>
+
+    <body style="background-color: #f7fff6;;">
+    <div class="conteudo">
+        <div style="width: 350px; height: 100%; float: left;">
+            <br>
+                <div style="width: 100%; height: 50px;">
+                    <h2 style="width: 90%; float: left;">Perfil</h2>
+                    <button style="background-color: #00000000; border: 0px; width: 10%; float: right;">
+                    </button>
+                </div>
+                <div>
+                    <div style="height: 200px; width: 200px; background-color: rgb(48, 48, 48); border-radius: 100%;">
+                        <button type="submit" id="btn_edit" style="background-color: #00000000; border: 0px; float: right;">
+                            <img src="https://drive.google.com/uc?export=view&id=1Wp4HPGePvGhFPmYsn7sumjDPn_KFWay6" style="height: 200px; border-radius: 100%;">
+                        </button>
+                    </div>
+                    <br>
+                    <input type="text" disabled="disabled" value="Nome e Sobrenome" style="border: none; background-color: #00000000; font-size: 20px;" size="30">
+                    <br>
+                    <input type="text" disabled="disabled" value="00.000.000/0001-00" style="border: none; background-color: #00000000; font-size: 16px; color: #a0a0a0;" size="18" maxlength="18" onkeypress="formatar_mascara(this,'##.###.###/####-##')">
+                    <br>
+                    <input type="text" disabled="disabled" value="01/01/2001" style="border: none; background-color: #00000000; font-size: 16px; color: #a0a0a0;" size="10" maxlength="10" onkeypress="formatar_mascara(this,'##/##/####')">
+                    <br>
+                    <input type="email" disabled="disabled" value="nomesobrenome@bacat.com" style="border: none; background-color: #00000000; font-size: 16px; color: #a0a0a0;" size="35">
+                    <br>
+                    <br>
+                </div>
+
+                <br>
+            <h2>Endereços</h2>
+            <div>
+                <div class="cardEndereco" id="cardEndereco">
+                    <div style="padding: 15px; width: 200px; float: left;">
+                        <div style="width: 100%; height: 20px; float: left; display: flex; justify-content: space-between;">
+                            <div style="float: left; display: flex; width: fit-content;" class="row">
+                                <input type="text" class="editEndereco" disabled="disabled" value="Rua Ruazinha Pica" style="width: 190px; border: none; background-color: #00000000; font-size: 16px; color: #696969; display: block;" maxlength="36" size="15">
+                            </div>
+                            <div style="float: left; display: flex; width: fit-content;" class="row">
+                                <input type="text" class="editEndereco" disabled="disabled" value="300" style="width: 60px; border: none; background-color: #00000000; font-size: 16px; color: #696969; display: block;" size="5">
+                            </div>    
+                        </div>
+                        <br>
+                        <div style="width: 100%; height: 20px; float: left; display: flex; justify-content: space-between;">
+                            <div style="float: left; display: flex; width: fit-content;" class="row">
+                                <input type="text" class="editEndereco" disabled="disabled" value="SP" style="border: none; width: 30px; background-color: #00000000; font-size: 16px; color: #696969; display: block;" maxlength="2" size="2" onkeypress="formatar_mascara(this,'##')">
+                            </div>
+                            <div style="float: left; display: flex; width: fit-content;" class="row">
+                                <p style="width: 10px; margin: 0px; background-color: #00000000; font-size: 16px; color: #696969; display: block;">-</p>
+                            </div>
+                            <div style="float: left; display: flex; width: fit-content;" class="row">
+                                <input type="text" class="editEndereco" disabled="disabled" value="Santo Barraqueiro" style="border: none; width: 210px; background-color: #00000000; font-size: 16px; color: #696969; display: block;" size="16">
+                            </div>    
+                        </div>
+                        <div style="width: 100%; height: 20px; float: left; display: flex; justify-content: space-between;">
+                            <div style="float: left; display: flex; width: fit-content;" class="row">
+                                <input type="text" class="editEndereco" disabled="disabled" value="55555-555" style="border: none; width: 90px; background-color: #00000000; font-size: 16px; color: #696969; display: block;" maxlength="9" size="9" onkeypress="formatar_mascara(this,'#####-###')">
+                            </div>  
+                        </div>
+                    </div>
+                    
+                    <div style="width: 20px; height: 70px; float: right; padding-top: 10px; padding-right: 15px;">
+                        <button id="toggleButton" onclick="toggleCampos()" style="background-color: #00000000; border: 0px; width: 10%; float: right; height: 20px; padding-right: 15px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <style>svg{fill:#a9c6a6}</style>
+                                <path d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z"/>
+                            </svg>
+                        </button>
+                        <button id="hiddenButton" onclick="desativarCampos()" hidden="hidden" type="submit" style="background-color: #00000000; border: 0px; width: 10%; float: right; height: 20px; padding-top: 10px; padding-right: 15px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 448 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <style>svg{fill:#86bd4c}</style>
+                                <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div style="width: 1px; height: 100%; background-color: #5a665b; float: left;"></div>
+
+        <div id="popup" class="popup" style="padding-top: 10%;">
+            <form action="ImgUpload.php" method="POST" enctype="multipart/form-data">
+                <div class="popup-content" style="width: 400px; height: 400px;">
+                    <span class="close">&times;</span>
+                    <img src="https://drive.google.com/uc?export=view&id=1Wp4HPGePvGhFPmYsn7sumjDPn_KFWay6" style="height: 280px; padding: 60px; padding-bottom: 0px; padding-top: 0px;">
+                    <div style="margin-left: 30px;"> 
+                        <input type="file" name="imagem" id="imagem">
+                        <button type="submit" style="background-color: #00000000; border: 0px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 512 512">
+                                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <style>svg{fill:#86bd4c}</style>
+                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM135.1 217.4l107.1-99.9c3.8-3.5 8.7-5.5 13.8-5.5s10.1 2 13.8 5.5l107.1 99.9c4.5 4.2 7.1 10.1 7.1 16.3c0 12.3-10 22.3-22.3 22.3H304v96c0 17.7-14.3 32-32 32H240c-17.7 0-32-14.3-32-32V256H150.3C138 256 128 246 128 233.7c0-6.2 2.6-12.1 7.1-16.3z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form> 
+        </div>        
+    </div>
+
+    </div>  
+    </body>
+    <script>
+         var ativo = false;
+
+        function toggleCampos() {
+            var campos = document.querySelectorAll('input[class="editEndereco"]');
+            var divs = document.querySelectorAll('.cardEndereco');
+            var hiddenButton = document.getElementById('hiddenButton');
+
+            if (ativo) {
+                for (var i = 0; i < campos.length; i++) {
+                    campos[i].disabled = false;
+                }
+                divs.forEach(function (div) {
+                    div.style.backgroundColor = 'lightgrey';
+                });
+                hiddenButton.removeAttribute('hidden');
+            } else {
+                for (var i = 0; i < campos.length; i++) {
+                    campos[i].disabled = true;
+                }
+                divs.forEach(function (div) {
+                    div.style.backgroundColor = '#f7fff6';
+                });
+                hiddenButton.setAttribute('hidden', 'hidden'); 
+            }
+
+            ativo = !ativo;
+        }
+
+        function desativarCampos() {
+            var campos = document.querySelectorAll('input[class="editEndereco"]');
+            var divs = document.querySelectorAll('.cardEndereco');
+            var hiddenButton = document.getElementById('hiddenButton');
+
+            for (var i = 0; i < campos.length; i++) {
+                    campos[i].disabled = true;
+                }
+                divs.forEach(function (div) {
+                    div.style.backgroundColor = '#f7fff6';
+                });
+                hiddenButton.setAttribute('hidden', 'hidden'); 
+            }
+ 
+        var popup = document.getElementById("popup");
+        
+        var btn = document.getElementById("btn_edit");
+        
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+        popup.style.display = "block";
+        }
+        
+        span.onclick = function() {
+        popup.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+        }
+    </script>
+    <script type="text/javascript"> 
+        function formatar_mascara(src, mascara) {
+        var campo = src.value.length;
+        var saida = mascara.substring(0,1);
+        var texto = mascara.substring(campo);
+        if(texto.substring(0,1) != saida) {
+            src.value += texto.substring(0,1);
+            }
+        }
+    </script>
+</html>

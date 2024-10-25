@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Home: Bacat</title>
+        <link rel="stylesheet" href="bacat.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <div class="sidenav" style=" float: left; position: absolute;">
+            <div style="display: block;">
+                <a class="cardsidenav" href="perfil.html">
+                    <img src="img/atv perfil.png" style="height: 50px;">
+                    <span class="text">Perfil</span>
+                </a>
+            </div>
+            <div style="display: block;">
+                <a class="cardsidenavatv" href="home.html">
+                    <img src="img/atvlojaaaa.png" style="height: 50px; margin-left: -6;">
+                    <span class="text">Loja Bacat</span>
+                </a>
+            </div>
+            <div style="display: block;">
+                <a class="cardsidenav" href="mensagens.html">
+                    <img src="img/atv mensagem.png" style="height: 50px;">
+                    <span class="text">Mensagens</span>
+                </a>
+            </div>
+
+            <div style="display: block;">
+                <a class="bottom cardsidenav" href="bacat.html">
+                    <img src="img/atv sair.png" style="height: 50px;">
+                    <span class="text">Sair</span>
+                </a>
+            </div>
+        </div>
+
+        <div style="background-color: #eaf8e9; width: 100%; height: 100%; float: right; white-space: nowrap;">
+            <form method="post" action="PesquisarServico.php" target="resultBox" style="margin: 0px;">
+                <div class="searchInput" style="padding: 10px; padding-left: 33%; padding-right: 7%;">
+                    <button type="submit" id="myBtn" style="border: 0px; background: #00000000;" onclick="myFunction()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <style>svg{fill:#86bd4c}</style>
+                            <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/>
+                        </svg>
+                    </button>
+                    <input type="text" class="search" id="search" name="search" size="60%">
+                    <iframe class="resultBox" id="resultBox" name="resultBox"></iframe>
+                </div>
+            </form>
+            <div style="width: 100%; height: 2.5px; background-color: #89988b;"></div>
+        </div>
+
+
+    </body>
+
+    <script>
+        function myFunction() {
+        document.getElementById("resultBox").style.transition = "height 0.5s";
+        document.getElementById("resultBox").style.height = "fit-content";
+        }
+    </script>
+</html>
